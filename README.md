@@ -17,7 +17,7 @@ A **modern**, **lightweight**, **native** dual-application Linux desktop sticker
 
 ---
 
-## 📸 Screenshots
+## Screenshots
 
 | Editor Interface | Desktop Overlay |
 |---|---|
@@ -25,7 +25,7 @@ A **modern**, **lightweight**, **native** dual-application Linux desktop sticker
 
 ---
 
-## ✨ Why WaySticker?
+## Why WaySticker?
 
 - **Pure Wayland Native**: Built with GTK4 + gtk4-layer-shell (no X11 fallback, no compromises)
 - **Lightweight**: ~40KB editor + ~25KB renderer (no Electron, no scripting)
@@ -41,9 +41,9 @@ A **modern**, **lightweight**, **native** dual-application Linux desktop sticker
 
 ---
 
-## 🎯 Core Features
+## Core Features
 
-### ✏️ Editor App (`stickers-editor`)
+### Editor App (`stickers-editor`)
 - 🖼️ **Asset Gallery**: Browse and manage sticker assets
 - 🎮 **Real-time Preview**: See stickers on desktop before saving
 - 🖱️ **Drag & Drop**: Position stickers anywhere on screen
@@ -51,14 +51,14 @@ A **modern**, **lightweight**, **native** dual-application Linux desktop sticker
 - 💾 **Save Config**: Persist positions and sizes as JSON
 - 📊 **Visual Feedback**: Live updates as you arrange
 
-### 🖥️ Renderer App (`stickers-render`)
+### Renderer App (`stickers-render`)
 - 🎨 **Wallpaper Layer**: Stickers render behind all windows
 - ⚡ **Lightweight**: Stateless display engine - just reads and displays
 - 🔒 **Read-Only**: Perfect for runtime display without interaction
 - 📍 **Pixel-Perfect**: Exact replication of editor preview
 - 🚀 **Fast Startup**: Load saved stickers instantly
 
-### 🛠️ Technical Highlights
+### Technical Highlights
 - **Wayland Native**: Full layer-shell integration (BACKGROUND layer)
 - **No GUI Overhead**: Pure C with GTK4 (no scripting languages)
 - **Negative Coordinates**: Place stickers off-screen if needed
@@ -68,7 +68,7 @@ A **modern**, **lightweight**, **native** dual-application Linux desktop sticker
 
 ---
 
-## 🚀 Quick Start
+## Quick Start
 
 ### Prerequisites
 - Linux Wayland environment (Hyprland recommended)
@@ -101,7 +101,7 @@ make
 
 ---
 
-## 📖 Complete Usage Guide
+## Complete Usage Guide
 
 ### Editor Workflow
 
@@ -195,37 +195,37 @@ Sticker positions are saved to `config/stickers.json`:
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 waysticker/
 │
-├── 📄 README.md                    # This file (documentation)
-├── 📄 ARCHITECTURE.md              # Detailed system design
-├── 📄 BUILD.md                     # Build instructions & troubleshooting
-├── 📄 LICENSE                      # MIT License
-├── 📄 Makefile                     # Build configuration
+├── README.md                    # This file (documentation)
+├── ARCHITECTURE.md              # Detailed system design
+├── BUILD.md                     # Build instructions & troubleshooting
+├── LICENSE                      # MIT License
+├── Makefile                     # Build configuration
 │
-├── 🎨 app_icon/
+├── app_icon/
 │   └── ws.png                      # App icon
 │
-├── 📸 screenshots/
+├── screenshots/
 │   ├── app.png                     # Editor interface screenshot
 │   └── screenshot.png              # Desktop overlay screenshot
 │
-├── 🖼️ assets/
+├── assets/
 │   ├── Abby.png                    # Example sticker
 │   ├── Amora.png                   # Example sticker
 │   └── [your stickers here]        # Add your own PNG/JPG/WebP files
 │
-├── ⚙️ config/
+├── config/
 │   └── stickers.json               # Saved sticker configuration (auto-generated)
 │
-├── 📝 docs/
+├── docs/
 │   ├── API.md                      # Function reference
 │   └── STYLE.md                    # Code style guide
 │
-└── 💻 src/
+└── src/
     ├── common/
     │   ├── config.c                # JSON save/load utilities
     │   └── sticker.h               # Shared constants and structs
@@ -248,7 +248,7 @@ waysticker/
 
 ---
 
-## 🔧 Installation Guide
+## Installation Guide
 
 ### For Arch Linux (Recommended)
 
@@ -297,7 +297,7 @@ ls -lh stickers-editor stickers-render
 
 ---
 
-## 🛠️ Build & Development
+## Build & Development
 
 ### Build Commands
 
@@ -335,7 +335,7 @@ pkg-config --libs gtk4 gtk4-layer-shell-0 json-c
 
 ---
 
-## ⚡ Performance & Resource Usage
+## Performance & Resource Usage
 
 | Metric | Value |
 |--------|-------|
@@ -350,7 +350,7 @@ pkg-config --libs gtk4 gtk4-layer-shell-0 json-c
 
 ---
 
-## 🐛 Troubleshooting
+## Troubleshooting
 
 ### Build Issues
 
@@ -394,7 +394,7 @@ make clean && make && ./stickers-editor
 
 ---
 
-## 🎨 Customization
+## Customization
 
 ### Adding Your Own Stickers
 
@@ -433,7 +433,7 @@ const char *CSS_STRING =
 
 ---
 
-## 📚 Advanced Topics
+## Advanced Topics
 
 ### Understanding the Architecture
 
@@ -500,7 +500,7 @@ This ensures:
 
 ---
 
-## 📖 Documentation References
+## Documentation References
 
 | Document | Purpose |
 |----------|---------|
@@ -537,7 +537,7 @@ We welcome contributions! Please follow these guidelines:
 
 ---
 
-## 📋 Known Limitations
+## Known Limitations
 
 | Limitation | Workaround | Future |
 |------------|-----------|--------|
@@ -549,7 +549,7 @@ We welcome contributions! Please follow these guidelines:
 
 ---
 
-## 🌟 Comparison with Alternatives
+## Comparison with Alternatives
 
 | Feature | WaySticker | Conky | xwinwrap | Electron App |
 |---------|-----------|-------|----------|--------------|
@@ -566,7 +566,7 @@ We welcome contributions! Please follow these guidelines:
 
 ---
 
-## 💡 Tips & Tricks
+## Tips & Tricks
 
 ### Pro Tips
 
@@ -593,7 +593,7 @@ make run-editor              # One command to build and launch
 
 ---
 
-## 📞 Support & Issues
+## Support & Issues
 
 ### Getting Help
 
@@ -613,7 +613,7 @@ make run-editor              # One command to build and launch
 
 ---
 
-## 📄 License
+## License
 
 **WaySticker** is licensed under the **MIT License**.
 
@@ -629,7 +629,7 @@ See [LICENSE](LICENSE) file for full details.
 
 ---
 
-## 👨‍💻 Author & Credits
+## Author & Credits
 
 **Karthi** - GTK/Wayland Sticker System  
 Built for Hyprland desktop environment with ❤️
@@ -643,7 +643,7 @@ Built for Hyprland desktop environment with ❤️
 
 ---
 
-## 🗺️ Project Roadmap
+## Project Roadmap
 
 ### Current (v1.0)
 - ✅ Editor application
