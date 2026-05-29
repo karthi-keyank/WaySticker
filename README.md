@@ -1,4 +1,4 @@
-# Stickers - Desktop Overlay Sticker System
+# WaySticker - Desktop Overlay Sticker System
 
 A dual-application Linux desktop sticker system built with GTK4 and Wayland layer-shell protocol.
 
