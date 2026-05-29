@@ -677,10 +677,8 @@ Built for Hyprland desktop environment with ❤️
 # Clone
 git clone https://github.com/karthi-keyank/WaySticker.git
 cd WaySticker
-
 # Build
 make
-
 # Run
 ./stickers-editor
 ```
