@@ -138,11 +138,6 @@ GtkWidget* create_sticker_window(
         GTK_CONTENT_FIT_CONTAIN
     );
 
-    gtk_picture_set_can_shrink(
-        GTK_PICTURE(picture),
-        TRUE
-    );
-
     gtk_widget_set_size_request(
         picture,
         size,
