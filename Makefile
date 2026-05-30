@@ -1,7 +1,9 @@
 CC = gcc
 
-CFLAGS = $(shell pkg-config --cflags gtk4 gtk4-layer-shell-0 json-c)
+PREFIX ?= /usr/local
+BINDIR = $(PREFIX)/bin
 
+CFLAGS = $(shell pkg-config --cflags gtk4 gtk4-layer-shell-0 json-c)
 LIBS = $(shell pkg-config --libs gtk4 gtk4-layer-shell-0 json-c)
 
 RENDERER_SRC = \
@@ -21,25 +23,38 @@ EDITOR_SRC = \
 	src/editor/resize.c \
 	src/common/config.c
 
+RENDERER_BIN = stickers-render
+EDITOR_BIN = stickers-editor
+
 all: renderer editor
 
 renderer:
 	$(CC) $(RENDERER_SRC) \
-	-o stickers-render \
+	-o $(RENDERER_BIN) \
 	$(CFLAGS) \
 	$(LIBS)
 
 editor:
 	$(CC) $(EDITOR_SRC) \
-	-o stickers-editor \
+	-o $(EDITOR_BIN) \
 	$(CFLAGS) \
 	$(LIBS)
 
+install: all
+	install -Dm755 $(RENDERER_BIN) $(DESTDIR)$(BINDIR)/$(RENDERER_BIN)
+	install -Dm755 $(EDITOR_BIN) $(DESTDIR)$(BINDIR)/$(EDITOR_BIN)
+
+uninstall:
+	rm -f $(DESTDIR)$(BINDIR)/$(RENDERER_BIN)
+	rm -f $(DESTDIR)$(BINDIR)/$(EDITOR_BIN)
+
 run-renderer: renderer
-	./stickers-render
+	./$(RENDERER_BIN)
 
 run-editor: editor
-	./stickers-editor
+	./$(EDITOR_BIN)
 
 clean:
-	rm -f stickers-render stickers-editor
+	rm -f $(RENDERER_BIN) $(EDITOR_BIN)
+
+.PHONY: all renderer editor install uninstall clean run-renderer run-editor
